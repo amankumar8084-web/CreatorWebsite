@@ -34,7 +34,7 @@ function App() {
 
   useEffect(() => {
     // Fetch YouTube stats only
-    fetch('http://localhost:5000/api/youtube-stats')
+    fetch('https://creatorwebsite.onrender.com/api/youtube-stats')
       .then(res => res.json())
       .then(data => setYoutubeStats(data))
       .catch(err => console.error(err));
