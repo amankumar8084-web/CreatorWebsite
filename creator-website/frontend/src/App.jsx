@@ -33,12 +33,12 @@ function App() {
   const [youtubeStats, setYoutubeStats] = useState(null);
 
   useEffect(() => {
-    // Fetch YouTube stats only
-    fetch('https://creatorwebsite.onrender.com/api/youtube-stats')
+    fetch(`${import.meta.env.VITE_API_URL}/api/youtube-stats`)
       .then(res => res.json())
       .then(data => setYoutubeStats(data))
       .catch(err => console.error(err));
   }, []);
+
 
   return (
     <div className="unique-card">
