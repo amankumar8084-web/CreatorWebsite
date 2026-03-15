@@ -9,22 +9,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// GitHub stats endpoint
-app.get('/api/github-stats', async (req, res) => {
-    try {
-        const username = process.env.GITHUB_USERNAME || 'octocat';
-        const response = await axios.get(`https://api.github.com/users/${username}`);
-        const data = response.data;
-        res.json({
-            followers: data.followers,
-            public_repos: data.public_repos,
-            following: data.following
-        });
-    } catch (error) {
-        console.error('Error fetching GitHub stats:', error.message);
-        res.status(500).json({ error: 'Failed to fetch GitHub stats' });
-    }
-});
 
 // YouTube stats endpoint
 app.get('/api/youtube-stats', async (req, res) => {
