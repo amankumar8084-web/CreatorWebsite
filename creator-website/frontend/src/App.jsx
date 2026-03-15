@@ -33,12 +33,14 @@ function App() {
   const [youtubeStats, setYoutubeStats] = useState(null);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/youtube-stats`)
-      .then(res => res.json())
-      .then(data => setYoutubeStats(data))
-      .catch(err => console.error(err));
-  }, []);
-
+  fetch(`${import.meta.env.VITE_API_URL}/api/youtube-stats`)
+    .then(res => res.json())
+    .then(data => {
+      console.log("API Response:", data);   // DEBUG
+      setYoutubeStats(data);
+    })
+    .catch(err => console.error("Fetch error:", err));
+}, []);
 
   return (
     <div className="unique-card">
