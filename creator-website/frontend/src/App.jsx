@@ -146,7 +146,7 @@ function App() {
         </div>
 
         <div className="social-bar">
-          <a href="https://youtube.com/@biharibabufactk?si=w-pDHp-gryhcMH36" className="social-button" target="_blank" rel="noreferrer">
+          <a href="https://www.youtube.com/@Kartikjack-bjk" className="social-button" target="_blank" rel="noreferrer">
             <i className="fa-brands fa-youtube"></i> YouTube
           </a>
           <a href="https://x.com/SubhashCha85240" className="social-button" target="_blank" rel="noreferrer">
